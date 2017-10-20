@@ -1,4 +1,13 @@
-class Cone
+#Inheritance----------------------------------------------------------------------------------------
+class Shape
+  def Volumeof(volume)
+    @volume = volumez
+    puts volume
+  end
+end
+
+#Classes--------------------------------------------------------------------------------------
+class Cone < Shape
   def Conev(radius,height)
     fraction = 0.3333
     pi = 3.14159
@@ -13,10 +22,14 @@ class Cone
     sarea = math2 * (pi * radius)
     puts "The surface area of your cone is #{sarea}cm^2"
   end
+  
+  def Volumeof(volume)
+    super
+  end
 end
 
 
-class Prism 
+class Prism < Shape
   def Prismv(length,width,height)
     volume = length * width * height
     puts "The volume of your prism is #{volume}cm^3"
@@ -26,10 +39,14 @@ class Prism
     sarea = 2*(width*length + height*length + height*width)
     puts "The surface area of your prism is #{sarea}cm^2"
   end
+  
+  def Volumeof(volume)
+    super
+  end
 end
 
 
-class Pyramid 
+class Pyramid < Shape
   def Pyramidv(length,width,height)
     volume = (length * width * height) / 3
     puts "The volume of your pyramid is #{volume}cm^3"
@@ -41,5 +58,9 @@ class Pyramid
     sarea = (length*width) + length*math2 + width*math1
     puts "The surface area of your pyramid is #{sarea}cm^2"
   end
+  def Volumeof(volume)
+    super
+  end
 end
+
 
