@@ -1,0 +1,24 @@
+class Cone
+  def Conev(radius,height)
+    fraction = 0.3333
+    pi = 3.14159
+    volume = fraction * pi * (radius ** 2) * height 
+    puts "The volume of your cone is #{volume}cm^3"
+  end
+end
+
+
+class Prism
+  def Prismv(length,width,height)
+    volume = length * width * height
+    puts "The volume of your prism is #{volume}cm^3"
+  end
+end
+
+
+class Pyramid
+  def Pyramidv(length,width,height)
+    volume = (length * width * height) / 3
+    puts "The volume of your pyramid is #{volume}cm^3"
+  end
+end
