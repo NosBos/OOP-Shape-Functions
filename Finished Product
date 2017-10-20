@@ -73,6 +73,41 @@ puts "2 - Surface Area"
 a = gets.to_f
 
 if a == 1
+  puts "\nWhat shape would you like to solve the volume of? "
+  puts "1 = Pyramid"
+  puts "2 = Prism"
+  puts "3 = Cone"
+  s=0
+  puts ""
+  s=gets.to_f
+  if s == 1
+    puts "\nWhat is the length of your pyramid in cm? "
+    x=gets.to_f
+    puts "\nWhat is the width of your pyramid in cm? "
+    y=gets.to_f
+    puts "\nWhat is the height of your pyramid in cm? "
+    z=gets.to_f
+    a=Pyramid.new.Pyramidv(x,y,z)
+    
+  elsif s == 2
+    puts "\nWhat is the length of your prism in cm? "
+    x=gets.to_i
+    puts "\nWhat is the width of your prism in cm? "
+    y=gets.to_i
+    puts "\nWhat is the height of your prism in cm? "
+    z=gets.to_i
+     b=Prism.new.Prismv(x,y,z)
+     
+  elsif s == 3
+    puts "\nWhat is the radius of your cone in cm? "
+    x=gets.to_i
+    puts "\nWhat is the height of your cone in cm? "
+    y=gets.to_i
+    c=Cone.new.Conev(x,y)
+    
+  else
+    puts "Please enter a valid answer"
+  end
 elsif a==2
 else
 end
