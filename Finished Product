@@ -23,3 +23,29 @@ class Pyramid
   end
 end
 
+class Cone  
+  def Cones(radius,height)
+    pi = 3.14159
+    math1 = Math.sqrt(radius**2 + height**2)
+    math2 = math1 + radius
+    sarea = math2 * (pi * radius)
+    puts "The surface area of your cone is #{sarea}cm^2"
+  end
+end
+
+
+class Prism
+  def Prisms(length,width,height)
+    sarea = 2*(width*length + height*length + height*width)
+    puts "The surface area of your prism is #{sarea}cm^2"
+  end
+end
+
+
+class Pyramid 
+  def Pyramidv(length,width,height)
+    volume = (length * width * height) / 3
+    puts "The volume of your pyramid is #{volume}cm^3"
+  end
+end
+
