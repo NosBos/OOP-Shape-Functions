@@ -151,7 +151,7 @@ if a == 1
   
   
 elsif a==2
-  puts "\nWhat shape would you like to solve the surface area of? "
+puts "\nWhat shape would you like to solve the surface area of? "
   puts "1 = Pyramid"
   puts "2 = Prism"
   puts "3 = Cone"
@@ -164,8 +164,22 @@ elsif a==2
     y=gets.to_f
     puts "\nWhat is the height of your pyramid in cm? "
     z=gets.to_f
-    a=Pyramid.new.Pyramids(x,y,z)
-
+    if x <= 0
+      puts "\nPlease enter valid integers"
+      q=1
+    elsif y <= 0
+      puts "\nPlease enter valid integers"
+      q=1
+    elsif z <= 0
+      puts "\nPlease enter valid integers"
+      q=1
+    else
+    end
+    if q == 0
+      puts ""
+      a=Pyramid.new.Pyramids(x,y,z)
+    else
+    end
   elsif v == 2
     puts "\nWhat is the length of your prism in cm? "
     x=gets.to_i
@@ -173,17 +187,44 @@ elsif a==2
     y=gets.to_i
     puts "\nWhat is the height of your prism in cm? "
     z=gets.to_i
-     b=Prism.new.Prisms(x,y,z)
-  
+    if x <= 0
+      puts "\nPlease enter valid integers"
+      q=1
+    elsif y <= 0
+      puts "\nPlease enter valid integers"
+      q=1
+    elsif z <= 0
+      puts "\nPlease enter valid integers"
+      q=1
+    else
+    end
+    if q == 0
+      puts ""
+      b=Prism.new.Prisms(x,y,z)
+    else
+    end
   elsif v == 3
     puts "\nWhat is the radius of your cone in cm? "
     x=gets.to_i
     puts "\nWhat is the height of your cone in cm? "
     y=gets.to_i
-     c=Cone.new.Cones(x,y)
+    if x <= 0
+      puts "\nPlease enter valid integers"
+      q=1
+    elsif y <= 0
+      puts "\nPlease enter valid integers"
+      q=1
+    else
+    end
+    if q == 0
+      puts ""
+      c=Cone.new.Cones(x,y)
+    else
+    end
   else
     puts "Please enter a valid answer"
   end
   q=0
 else
+  puts ""Please enter a valid answer"
 end
