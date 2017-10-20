@@ -5,25 +5,7 @@ class Cone
     volume = fraction * pi * (radius ** 2) * height 
     puts "The volume of your cone is #{volume}cm^3"
   end
-end
-
-
-class Prism
-  def Prismv(length,width,height)
-    volume = length * width * height
-    puts "The volume of your prism is #{volume}cm^3"
-  end
-end
-
-
-class Pyramid 
-  def Pyramidv(length,width,height)
-    volume = (length * width * height) / 3
-    puts "The volume of your pyramid is #{volume}cm^3"
-  end
-end
-
-class Cone  
+  
   def Cones(radius,height)
     pi = 3.14159
     math1 = Math.sqrt(radius**2 + height**2)
@@ -34,7 +16,12 @@ class Cone
 end
 
 
-class Prism
+class Prism 
+  def Prismv(length,width,height)
+    volume = length * width * height
+    puts "The volume of your prism is #{volume}cm^3"
+  end
+  
   def Prisms(length,width,height)
     sarea = 2*(width*length + height*length + height*width)
     puts "The surface area of your prism is #{sarea}cm^2"
@@ -46,6 +33,13 @@ class Pyramid
   def Pyramidv(length,width,height)
     volume = (length * width * height) / 3
     puts "The volume of your pyramid is #{volume}cm^3"
+  end
+  
+  def Pyramids(length,width,height)
+    math1=Math.sqrt((length/2)**2 + height**2)
+    math2=Math.sqrt((width/2)**2 + height**2)
+    sarea = (length*width) + length*math2 + width*math1
+    puts "The surface area of your pyramid is #{sarea}cm^2"
   end
 end
 
